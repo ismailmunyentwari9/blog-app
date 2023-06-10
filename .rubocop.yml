@@ -21,7 +21,7 @@ Metrics/PerceivedComplexity:
   Max: 9
 Metrics/BlockLength:
   IgnoredMethods: ['describe']
-  Max: 30
+  Max: 41
 
 
 Style/Documentation:
