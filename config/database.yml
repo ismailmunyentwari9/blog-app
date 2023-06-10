@@ -17,13 +17,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: blog 
+  database: blog
   username: postgres
   password: 615243
   host: localhost
@@ -61,13 +59,12 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  default: &default
-    adapter: postgresql
-    encoding: unicode
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-    host: localhost
-    username: postgres
-    password: 615243
+  <<: *default
+  database: blog_test
+  username: postgres
+  password: 615243
+  host: localhost
+  port: 5432
 
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -92,6 +89,9 @@ test:
 #
 production:
   <<: *default
-  database: blog
+  database: blog_production
   username: postgres
   password: 615243
+  host: localhost
+  port: 5432
+
