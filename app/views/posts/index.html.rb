@@ -1,0 +1,1 @@
+<center><h1>..ALL POSTS</h1></center>
