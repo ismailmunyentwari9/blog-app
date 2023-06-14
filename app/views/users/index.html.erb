@@ -1,1 +1,12 @@
-<center><h1>..ALL USERS</h1></center>
+<%= stylesheet_link_tag 'users_styles' %>
+<div>
+  <% @recent_posts.each do |post| %>
+  <ul>
+    <li><img src=<%= post.author.photo %>></li>
+    <div class="border"> 
+      <li><%= post.author.name %></li>
+      <li>Number of posts <%= post.author.posts_counter %></li>
+    </div>
+  </ul>
+<% end %>
+</div>
