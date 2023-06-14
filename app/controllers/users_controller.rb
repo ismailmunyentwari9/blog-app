@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @recent_posts = User.all.map(&:recent_posts).flatten
+    @users = User.all
   end
 
   def show

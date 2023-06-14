@@ -1,11 +1,11 @@
 <%= stylesheet_link_tag 'users_styles' %>
 <div>
-  <% @recent_posts.each do |post| %>
+  <% @users.each do |user| %>
   <ul>
-    <li><img src=<%= post.author.photo %>></li>
+    <li><img src=<%= user.photo %>></li>
     <div class="border"> 
-      <li><%= post.author.name %></li>
-      <li>Number of posts <%= post.author.posts_counter %></li>
+      <li><%= user.name %></li>
+      <li>Number of posts <%= user.posts_counter %></li>
     </div>
   </ul>
 <% end %>
