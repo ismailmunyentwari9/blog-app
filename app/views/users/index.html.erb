@@ -1,1 +1,12 @@
-<center><h1>..ALL USERS</h1></center>
+<%= stylesheet_link_tag 'users_styles' %>
+<div>
+  <% @users.each do |user| %>
+  <ul>
+    <li><img src=<%= user.photo %>></li>
+    <div class="border"> 
+      <li><%= user.name %></li>
+      <li>Number of posts <%= user.posts_counter %></li>
+    </div>
+  </ul>
+<% end %>
+</div>
