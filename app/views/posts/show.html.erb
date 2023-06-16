@@ -1,11 +1,23 @@
-<div class="comments">
+<div class="post_comments"><div class="comments">
   <div class="post_header">
-    <span>Post: <%= @post_index %> by <%= @user_post.author.name %></span>
+    <span>Post: <%= @user_post.id %> by <%= @user_post.author.name %></span>
     <span>Comments: <%= @comments_count %> || Likes: <%= @likes_count %></span>
+    <p>
+     <%= @user_post.text %>
+    </p>
   </div>
-
+</div>
+<div class="comments">
   <% @user_post.comments.each do |comment| %>
-    <p><%= @user_post.text %>: <%= comment.text %></p>
     <p><span><%= comment.author.name %></span>: <%= comment.text %></p>
-  <% end %>
+  <% end %></div>
+ <!-- Form to Add new comment -->
+  <div class="form">
+  <h1>Add post comment</h1>
+    <%= form_with(model: @comment, url: create_comment_post_path(@user_post, @comment.post_id)) do |form| %>
+
+      <div class="comment_input"><%= form.text_area :text, placeholder: 'Enter your comment' %></div>
+      <%= form.submit 'Post Comment' %>
+    <% end %>
+  </div>
 </div>
