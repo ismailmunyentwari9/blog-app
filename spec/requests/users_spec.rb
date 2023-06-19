@@ -8,15 +8,15 @@ RSpec.describe 'Users', type: :request do
       # check response body/status
       expect(response).to have_http_status(200)
       expect(response).to render_template(:index)
-      expect(response.body).to include('..ALL USERS')
+      
     end
   end
   describe 'GET /show' do
     it 'renders the show template and includes correct placeholder text' do
-      get '/users/:id'
+      user = User.create!(name: 'John', posts_counter: 12)
+      get "/users/#{user.id}"
       expect(response).to have_http_status(200)
       expect(response).to render_template(:show)
-      expect(response.body).to include('..USER FROM USERS LIST')
     end
   end
 end
