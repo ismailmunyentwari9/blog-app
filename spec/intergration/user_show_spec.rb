@@ -1,7 +1,7 @@
-# spec/request/user_show_spec.rb
-require 'rails_helper'
-require 'capybara'
+# # spec/request/user_show_spec.rb
+# require 'rails_helper'
+# require 'capybara'
 
-RSpec.describe 'User Index Page', type: :request do
-  # ...
-end
+# RSpec.describe 'User Index Page', type: :request do
+#   # ...
+# end
