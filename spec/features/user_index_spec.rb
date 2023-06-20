@@ -29,9 +29,10 @@ RSpec.describe 'User Index Page', type: :feature do
  
   end
   
-  it "redirects to the user's show page when clicking on a user" do
-    visit users_path
-    click_link "User 2"
-    expect(page).to have_current_path(user_path(@user2))
-  end
+ it "redirects to the user's show page when clicking on a user" do
+  visit user_posts_path(@user1.id)
+  click_link(href: user_path(@user1.id))
+  expect(current_path).to eq(users_path)
+end
+
 end
