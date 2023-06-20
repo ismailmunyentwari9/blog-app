@@ -15,7 +15,7 @@
   <div class="post">
     <% @user_posts.each_with_index do |post, index| %>
       <%= link_to user_post_path(@user,post.id) do %>
-        <h2>Post <%= index+1 %></h2>
+        <h3>Post <%= index+1 %></h3>
       <% end %>
       <%= post.text %>
       <p>Comments: <%= post.comments_counter %> || Likes: <%= post.likes_counter %></p>

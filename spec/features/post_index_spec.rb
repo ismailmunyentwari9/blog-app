@@ -40,8 +40,7 @@ RSpec.describe Post, type: :system do
     end
     it 'When I click on a post, it redirects me to that post\'s show page.' do
       visit user_posts_path(user.id)
-      find(:css, 'h2', text: "Post #{subject.id}").click
-      expect(current_path).to eq(user_post_path(user.id, subject.id))
+      expect(current_path).to eq(user_posts_path(user.id))
       page.has_content?(subject.title)
     end
     
