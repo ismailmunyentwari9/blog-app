@@ -1,160 +1,173 @@
-ul,.border{
-    display: flex;
-    gap:2%;
-    align-items: center;
-}
-.border{
-    gap:65%;
-    border-radius:7px;
-    padding: 12px;
-    width: 50%;
-    border:3px solid black
-}
-ul li{
-    list-style-type:none;
-}
-ul .border li:nth-child(1){
-    font-size: 35px;
-    font-weight: 600;
-}
-ul .border  li:nth-child(2){
-    align-self: flex-end;
-    margin-left:2%;
-    font-size: 20px;
-    gap:1%;
-}
-ul li img{
-    width:100px;
-}
-.bio{
-    margin-bottom:4%;
-}
-.comments,.bio,.post{
-    width:57%;
-    margin-left:3%;
-    border:2px solid black;
-    padding:12px;
-    border-radius:4px;
-    font-weight: 500;
-    font-size:22px;
-}
-.post{
-    margin-top:5px;
-    padding-bottom:4%;
-    height: auto;
-    
-}
-.post p{
-    float: right;
-    font-weight: 600;
-}
-.comments span{
-   font-weight:600; 
-}
-.post_haader{
-    display:flex;
-    justify-content: space-between;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-button{
-    margin:2%  30%;
-    font-size: 28px;
-    border:4px solid black;
-    border-radius:5px;
-    box-shadow: 12px 12px 12px black;
-    background-color: transparent;
-    
-}
-div input{
-    margin-bottom: bottom 2px;
+ul,
+.border {
+  display: flex;
+  gap: 2%;
+  align-items: center;
 }
 
-.form{
+.border {
+  gap: 65%;
+  border-radius: 7px;
+  padding: 12px;
+  width: 50%;
+  border: 3px solid black;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul .border li:nth-child(1) {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+ul .border li:nth-child(2) {
+  align-self: flex-end;
+  margin-left: 2%;
+  font-size: 20px;
+  gap: 1%;
+}
+
+ul li img {
+  width: 100px;
+}
+
+.bio {
+  margin-bottom: 4%;
+}
+
+.comments,
+.bio,
+.post {
+  width: 57%;
+  margin-left: 3%;
+  border: 2px solid black;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.post {
+  margin-top: 5px;
+  padding-bottom: 4%;
+  height: auto;
+}
+
+.post p {
+  float: right;
+  font-weight: 600;
+}
+
+.comments span {
+  font-weight: 600;
+}
+
+.post_haader {
   display: flex;
-  flex-direction:column;
-  margin-left:2.5rem;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  margin: 2%  30%;
+  font-size: 28px;
+  border: 4px solid black;
+  border-radius: 5px;
+  box-shadow: 12px 12px 12px black;
+  background-color: transparent;
+}
+
+div input {
+  margin-bottom: 2px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2.5rem;
 }
 
 /* CSS for form inputs */
 .post-form .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .post-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .post-form input[type="text"],
-  .post-form input[type="number"] {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .post-form .btn {
-    padding: 10px 20px;
-    background-color: #428bca;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .post-form .btn:hover {
-    background-color: #3071a9;
-  }
-  /* CSS for form and comments section */
-.post_comments {
-    margin-top: 20px;
-  }
-  
-  .post_header {
-    margin-bottom: 10px;
-  }
-  
-  .post_header span {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .post_header p {
-    margin: 0;
-  }
-  
-  .comments p {
-    margin: 5px 0;
-  }
-  
-  .form {
-    margin-top: 20px;
-  }
-  
-  .comment_input textarea {
-    width: 70%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #428bca;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .form input[type="submit"]:hover {
-    background-color: #3071a9;
-  }
-  
-  
+  margin-bottom: 20px;
+}
 
+.post-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.post-form input[type="text"],
+.post-form input[type="number"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.post-form .btn {
+  padding: 10px 20px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.post-form .btn:hover {
+  background-color: #3071a9;
+}
+
+/* CSS for form and comments section */
+.post_comments {
+  margin-top: 20px;
+}
+
+/* .post_header {
+  margin-bottom: 10px;
+} */
+
+.post_header span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.post_header p {
+  margin: 0;
+}
+
+.comments p {
+  margin: 5px 0;
+}
+
+/* .form {
+  margin-top: 20px;
+} */
+
+.comment_input textarea {
+  width: 70%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #3071a9;
+}

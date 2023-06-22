@@ -33,5 +33,6 @@ group :development, :test do
   gem 'shoulda-matchers'
 end
 
+gem 'devise'
 gem 'rails-controller-testing'
 gem 'rubocop', '>= 1.0', '< 2.0'

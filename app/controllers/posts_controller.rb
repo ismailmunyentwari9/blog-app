@@ -8,7 +8,6 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @user_post = @user.posts.find(params[:id])
-    @author_id = current_user.id
     @post_index = @user.posts.order(created_at: :desc).pluck(:id).index(@user_post.id) + 1
     @likes_count = @user_post.likes_counter
     @comments_count = @user_post.comments_counter
