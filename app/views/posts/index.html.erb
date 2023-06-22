@@ -6,28 +6,24 @@
       <li><%= @user.name %></li>
       <li>Number of posts: <%= @user.posts_counter %></li>
     </div>
-   
   </ul>
   <!--Bio section part-->
-   <div class="bio">
+  <div class="bio">
     <h2>Bio</h2>
-    <%= @user.bio%>
-    </div>
-    <div class="post">
-    <%@user_posts.each_with_index do |post, index|%>
-    <h2>post <%=index+1%></h2>
-    <%=post.text %>
-    <p>Comments:<%=post.comments_counter %>||
-    Likes:<%=post.likes_counter %>
-    </p>
-
-    <%end%>
-    
-</div>
-<div class="comments">
-   <% @recent_comments.each do |comment| %>
-    <p><span><%= comment.author.name %></span>:<%= comment.text %></p>
-   <% end %>
- </div>
-
+    <%= @user.bio %>
+  </div>
+  <div class="post">
+    <% @user_posts.each_with_index do |post, index| %>
+      <%= link_to user_post_path(@user,post.id) do %>
+        <h3>Post <%= index+1 %></h3>
+      <% end %>
+      <%= post.text %>
+      <p>Comments: <%= post.comments_counter %> || Likes: <%= post.likes_counter %></p>
+    <% end %>
+  </div>
+  <div class="comments">
+    <% @recent_comments.each do |comment| %>
+      <p><span><%= comment.author.name %></span>: <%= comment.text %></p>
+    <% end %>
+  </div>
 </div>

@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
-    @user_posts = @user.posts.order(created_at: :desc)
-    @recent_comments = @user_posts.map(&:recent_comments).flatten
+    @user_posts = @user.posts.includes(:comments).order(created_at: :desc)
+    @recent_comments = @user_posts.flat_map(&:recent_comments)
   end
 
   def show

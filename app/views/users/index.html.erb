@@ -1,12 +1,13 @@
 <%= stylesheet_link_tag 'users_styles' %>
 <div>
   <% @users.each do |user| %>
-  <ul>
-    <li><img src=<%= user.photo %>></li>
-    <div class="border"> 
-      <li><%= user.name %></li>
-      <li>Number of posts <%= user.posts_counter %></li>
-    </div>
-  </ul>
-<% end %>
+    <ul>
+      <li><img src=<%= user.photo %>></li>
+      <div class="border"> 
+        <li><%= link_to user.name, user_path(user) %></li>
+        <li>Number of posts <%= user.posts_counter %></li>
+      </div>
+    </ul>
+  <% end %>
 </div>
+
